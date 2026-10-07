@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SkyPort 3D — Interactive Airport Terminal</title>  <script type="module" crossorigin src="/SkyPort-3D/assets/index-DuolkRcj.js"></script>
+  <link rel="stylesheet" crossorigin href="/SkyPort-3D/assets/index-Cj0T9TRm.css">
+</head>
+<body>
+<canvas id="c"></canvas>
+<nav class="navbar navbar-expand-lg navbar-dark glass fixed-top"><div class="container-fluid">
+ <a class="navbar-brand fw-bold" href="#" data-nav="terminal">✈ SKYPORT <span class="amber">INTERNATIONAL</span></a>
+ <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+ <div class="collapse navbar-collapse" id="nav">
+  <ul class="navbar-nav me-auto">
+   <li><button class="nav-link btn btn-link" data-nav="terminal">Terminal</button></li>
+   <li><button class="nav-link btn btn-link" data-nav="flights">Flights</button></li>
+   <li><button class="nav-link btn btn-link" data-nav="gates">Gates</button></li>
+   <li><button class="nav-link btn btn-link" data-nav="passengers">Passengers</button></li>
+   <li><button class="nav-link btn btn-link" data-nav="map">Airport Map</button></li>
+  </ul>
+  <div class="d-flex flex-wrap align-items-center gap-2 py-2">
+   <div class="form-check form-switch m-0 text-light"><input class="form-check-input" type="checkbox" id="dn"><label class="form-check-label" for="dn" id="dnl">☀️ Day</label></div>
+   <div class="btn-group btn-group-sm" id="wx">
+    <button class="btn btn-outline-info active" data-wx="clear">Clear</button>
+    <button class="btn btn-outline-info" data-wx="rain">Rain</button>
+    <button class="btn btn-outline-info" data-wx="fog">Fog</button></div>
+   <button class="btn btn-sm btn-outline-warning" id="snd">🔇 Sound OFF</button>
+  </div></div></div></nav>
+<div id="stats">
+ <div class="glass stat"><b id="s-fl">0</b><small>✈️ Active Flights</small></div>
+ <div class="glass stat"><b id="s-pa">0</b><small>👥 Passengers</small></div>
+ <div class="glass stat"><b id="s-ba">0</b><small>🛄 Bags</small></div>
+ <div class="glass stat"><b id="s-ga">0</b><small>🚪 Open Gates</small></div>
+</div>
+<aside id="info" class="glass">
+ <div class="d-flex justify-content-between align-items-start"><h6 id="i-title" class="amber mb-2">SkyPort 3D</h6><button class="btn-close btn-close-white" id="i-close" aria-label="Close"></button></div>
+ <div id="i-body"></div><hr class="my-2"><div class="small fw-bold mb-1 amber">LIVE SIMULATION</div><div id="sim" class="small"></div>
+</aside>
+<div id="ctrl" class="glass">
+ <button class="btn btn-sm btn-outline-light active" data-cam="overview">Airport Overview</button>
+ <button class="btn btn-sm btn-outline-light" data-cam="checkin">Check-In</button>
+ <button class="btn btn-sm btn-outline-light" data-cam="security">Security</button>
+ <button class="btn btn-sm btn-outline-light" data-cam="lounge">Departure Lounge</button>
+ <button class="btn btn-sm btn-outline-light" data-cam="gates">Gates</button>
+ <button class="btn btn-sm btn-outline-light" data-cam="baggage">Baggage</button>
+ <button class="btn btn-sm btn-outline-light" data-cam="exterior">Exterior</button>
+</div>
+<div id="mini" class="glass"><canvas id="mapc" width="200" height="136"></canvas></div>
+<footer id="status" class="glass">SKYPORT INTERNATIONAL AIRPORT • TERMINAL 1</footer>
+</body></html>
